@@ -58,7 +58,7 @@ public class NameMod {
             event.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK);
         }
     }
-
+//wichtige Info
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
