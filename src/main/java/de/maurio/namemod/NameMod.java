@@ -2,8 +2,8 @@ package de.maurio.namemod;
 
 import com.mojang.logging.LogUtils;
 import de.maurio.namemod.blocks.ModBlocks;
+import de.maurio.namemod.item.ModCreativeModeTabs;
 import de.maurio.namemod.item.ModItems;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -33,6 +33,8 @@ public class NameMod {
         modEventBus.addListener(this::commonSetup);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+
+        ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
